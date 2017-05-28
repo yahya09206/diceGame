@@ -29,6 +29,10 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 	var dice = Math.floor(Math.random() * 6) + 1;
 
 	//2. display result
+	var diceDom = document.querySelector('.dice');
+	diceDom.style.display = 'block';
+	//Change dice image to match number rolled
+	diceDom.src = 'dice-' + dice + '.png';
 
 
 	//3. update round score IF the rolled number was NOT a 1
