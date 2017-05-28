@@ -20,3 +20,6 @@ dice = Math.floor(Math.random() * 6) + 1;
 //DOM Manipulation
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</>'
 document.querySelector('#current-' + activePlayer).textContent = dice;
+
+//Hide dice at begining of game
+document.querySelector('.dice').style.display = 'none';
