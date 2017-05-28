@@ -15,7 +15,6 @@ scores = [0,0];
 roundScore = 0;
 activePlayer = 1;
 
-dice = Math.floor(Math.random() * 6) + 1;
 
 //DOM Manipulation
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</>'
@@ -23,3 +22,13 @@ document.querySelector('#current-' + activePlayer).textContent = dice;
 
 //Hide dice at begining of game
 document.querySelector('.dice').style.display = 'none';
+
+//Click on roll dice to change number
+document.querySelector('.btn-roll').addEventListener('click', function(){
+	//1. random number
+	dice = Math.floor(Math.random() * 6) + 1;
+	//2. display result
+
+
+	//3. update round score IF the rolled number was NOT a 1
+});
