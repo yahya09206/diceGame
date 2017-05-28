@@ -18,17 +18,20 @@ activePlayer = 1;
 //Hide dice at begining of game
 document.querySelector('.dice').style.display = 'none';
 
+//Get element by id method
+document.getElementById('score-0').textContent = '0'
+document.getElementById('score-1').textContent = '0'
+document.getElementById('current-0').textContent = '0'
+document.getElementById('current-1').textContent = '0'
+
 //Click on roll dice to change number
 document.querySelector('.btn-roll').addEventListener('click', function(){
 	//1. random number
 	var dice = Math.floor(Math.random() * 6) + 1;
-
 	//2. display result
 	var diceDom = document.querySelector('.dice');
 	diceDom.style.display = 'block';
 	//Change dice image to match number rolled
 	diceDom.src = 'img/dice-' + dice + '.png';
-
-
 	//3. update round score IF the rolled number was NOT a 1
 });
