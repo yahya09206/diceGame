@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 //Variable declarations for game
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 
 scores = [0,0];
 roundScore = 0;
@@ -26,7 +26,8 @@ document.querySelector('.dice').style.display = 'none';
 //Click on roll dice to change number
 document.querySelector('.btn-roll').addEventListener('click', function(){
 	//1. random number
-	dice = Math.floor(Math.random() * 6) + 1;
+	var dice = Math.floor(Math.random() * 6) + 1;
+
 	//2. display result
 
 
