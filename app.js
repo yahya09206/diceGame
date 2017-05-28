@@ -15,11 +15,6 @@ scores = [0,0];
 roundScore = 0;
 activePlayer = 1;
 
-
-//DOM Manipulation
-// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</>'
-document.querySelector('#current-' + activePlayer).textContent = dice;
-
 //Hide dice at begining of game
 document.querySelector('.dice').style.display = 'none';
 
@@ -32,7 +27,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 	var diceDom = document.querySelector('.dice');
 	diceDom.style.display = 'block';
 	//Change dice image to match number rolled
-	diceDom.src = 'dice-' + dice + '.png';
+	diceDom.src = 'img/dice-' + dice + '.png';
 
 
 	//3. update round score IF the rolled number was NOT a 1
