@@ -75,12 +75,12 @@ function nextPlayer(){
 document.querySelector('.btn-new').addEventListener('click', init());
 
 function init(){
+	//reset gameboard/scores
 	scores = [0,0];
 	roundScore = 0;
 	activePlayer = 0;
 	//Hide dice at begining of game
 	document.querySelector('.dice').style.display = 'none';
-	//Get element by id method
 	document.getElementById('score-0').textContent = '0';
 	document.getElementById('score-1').textContent = '0';
 	document.getElementById('current-0').textContent = '0';
@@ -91,6 +91,7 @@ function init(){
 	document.querySelector('.player-1').classList.remove('winner');
 	document.querySelector('.player-0-panel').classList.remove('active');
 	document.querySelector('.player-1-panel').classList.remove('active');
+	//set active class to player 1 at start of game
 	document.querySelector('.player-0-panel').classList.add('active');
 
 
