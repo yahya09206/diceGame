@@ -79,4 +79,6 @@ function nextPlayer(){
 		document.querySelector('.player-1-panel').classList.toggle('active');
 		//Remove dice in between switching active players
 		document.querySelector('.dice').style.display = 'none';
-	};
+};
+
+//New game initialization
