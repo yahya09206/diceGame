@@ -47,13 +47,20 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
 //Hold score function
 document.querySelector('.btn-hold').addEventListener('click', function(){
+
 	//Add current score to players global score
 	scores[activePlayer] += roundScore;
+
 	//Update the ui
-	document.querySelector('#score' + activePlayer).textContent = scores[activePlayer];
+	document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+	//Check if player won the game
+	// scores[activePlayer] === 100 : scores[activePlayer] = 'winner';
+	if(scores[activePlayer] >= 20){
+		document.querySelector('#name-' + activePlayer).textContent = 'Winner';
+	};
 	//next player
 	nextPlayer();
-	//Check if player won the game
 });
 
 //Next player function
@@ -62,14 +69,12 @@ function nextPlayer(){
 		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 		//Set round score back to 0
 		roundScore = 0;
-
 		//Set user score to 0 inside of user interface after they roll a one
 		document.getElementById('current-0').textContent = '0';
 		document.getElementById('current-1').textContent = '0';
 		//toggle between active players
 		document.querySelector('.player-0-panel').classList.toggle('active');
 		document.querySelector('.player-1-panel').classList.toggle('active');
-		
 		//Remove dice in between switching active players
 		document.querySelector('.dice').style.display = 'none';
 	};
