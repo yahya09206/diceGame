@@ -36,6 +36,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 	//3. update round score IF the rolled number was NOT a 1
 	if(dice !== 1){
 		//Add score
+		roundScore += dice;
 
 	}else {
 		//Next Player
