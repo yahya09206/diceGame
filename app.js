@@ -40,7 +40,9 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		//show current user inside of interface
 		document.querySelector('#current-' + activePlayer).textContent = roundScore;
 	}else {
-		//Next Player
+		//Switch to Next Player using ternary operator
 		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+		//Set round score back to 0
+		roundScore = 0;
 	}
 });
