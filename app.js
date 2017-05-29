@@ -11,14 +11,8 @@ GAME RULES:
 //Variable declarations for game
 var scores, roundScore, activePlayer;
 
-//Hide dice at begining of game
-document.querySelector('.dice').style.display = 'none';
-
-//Get element by id method
-document.getElementById('score-0').textContent = '0'
-document.getElementById('score-1').textContent = '0'
-document.getElementById('current-0').textContent = '0'
-document.getElementById('current-1').textContent = '0'
+//on document load
+init();
 
 //Click on roll dice to change number
 document.querySelector('.btn-roll').addEventListener('click', function(){
@@ -78,12 +72,18 @@ function nextPlayer(){
 };
 
 //New game initialization
-document.querySelector('.btn-new').addEventListener('click', function(){
-
-});
+document.querySelector('.btn-new').addEventListener('click', init());
 
 function init(){
 	scores = [0,0];
 	roundScore = 0;
 	activePlayer = 0;
+	//Hide dice at begining of game
+	document.querySelector('.dice').style.display = 'none';
+	//Get element by id method
+	document.getElementById('score-0').textContent = '0'
+	document.getElementById('score-1').textContent = '0'
+	document.getElementById('current-0').textContent = '0'
+	document.getElementById('current-1').textContent = '0'
+
 }
