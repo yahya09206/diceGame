@@ -66,3 +66,5 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 
 	//Check if player won the game
 });
+
+//Next player function
