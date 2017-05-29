@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 //Variable declarations for game
-var scores, roundScore, activePlayer;
+var scores, roundScore, activePlayer, gamePlaying;
 
 //on document load
 init();
@@ -93,7 +93,4 @@ function init(){
 	document.querySelector('.player-1-panel').classList.remove('active');
 	//set active class to player 1 at start of game
 	document.querySelector('.player-0-panel').classList.add('active');
-
-
-
-}
+};
