@@ -44,5 +44,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 		//Set round score back to 0
 		roundScore = 0;
+		//Set user score to 0 inside of user interface
+		document.getElementById('current-0').textContent = '0';
+		document.getElementById('current-1').textContent = '0';
 	}
 });
