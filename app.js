@@ -13,7 +13,7 @@ var scores, roundScore, activePlayer;
 
 scores = [0,0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 
 //Hide dice at begining of game
 document.querySelector('.dice').style.display = 'none';
@@ -37,9 +37,10 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 	if(dice !== 1){
 		//Add score
 		roundScore += dice;
+		//show current user inside of interface
 		document.querySelector('#current-' + activePlayer).textContent = roundScore;
 	}else {
 		//Next Player
-
+		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 	}
 });
