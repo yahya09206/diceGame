@@ -34,7 +34,10 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 	//Change dice image to match number rolled
 	diceDom.src = 'img/dice-' + dice + '.png';
 	//3. update round score IF the rolled number was NOT a 1
-	if(dice === 1){
-		
+	if(dice !== 1){
+		//Add score
+
+	}else {
+		//Next Player
 	}
 });
