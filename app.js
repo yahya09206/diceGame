@@ -87,7 +87,10 @@ function init(){
 	document.getElementById('current-1').textContent = '0';
 	document.getElementById('name-0').textContent = 'Players-1';
 	document.getElementById('name-1').textContent = 'Players-1';
-	document.querySelector('.player-' + activePlayer + '-panel').classList.remove('winner');
+	document.querySelector('.player-0').classList.remove('winner');
+	document.querySelector('.player-1').classList.remove('winner');
+	document.querySelector('.player-0-panel').classList.remove('active');
+	document.querySelector('.player-1-panel').classList.remove('active');
 
 
 
