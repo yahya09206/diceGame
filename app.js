@@ -81,9 +81,12 @@ function init(){
 	//Hide dice at begining of game
 	document.querySelector('.dice').style.display = 'none';
 	//Get element by id method
-	document.getElementById('score-0').textContent = '0'
-	document.getElementById('score-1').textContent = '0'
-	document.getElementById('current-0').textContent = '0'
-	document.getElementById('current-1').textContent = '0'
+	document.getElementById('score-0').textContent = '0';
+	document.getElementById('score-1').textContent = '0';
+	document.getElementById('current-0').textContent = '0';
+	document.getElementById('current-1').textContent = '0';
+	document.getElementById('name-0').textContent = 'Players-1';
+	document.getElementById('name-1').textContent = 'Players-1';
+
 
 }
