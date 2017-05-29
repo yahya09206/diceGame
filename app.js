@@ -78,7 +78,7 @@ function nextPlayer(){
 };
 
 //New game initialization
-document.querySelector('.btn-new').addEventListener('click', init());
+document.querySelector('.btn-new').addEventListener('click', init);
 
 function init(){
 	//reset gameboard/scores
