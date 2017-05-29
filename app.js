@@ -56,3 +56,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		document.querySelector('.dice').style.display = 'none';
 	}
 });
+
+//Hold score function
+document.querySelector('.btn-hold').addEventListener('click', function(){
+
+});
