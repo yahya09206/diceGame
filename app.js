@@ -48,10 +48,11 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		//Set user score to 0 inside of user interface after they roll a one
 		document.getElementById('current-0').textContent = '0';
 		document.getElementById('current-1').textContent = '0';
-		//toggle between players to make active
+		//toggle between active players
 		document.querySelector('.player-0-panel').classList.toggle('active');
 		document.querySelector('.player-1-panel').classList.toggle('active');
-		// document.querySelector('.player-0-panel').classList.remove('active');
-		// document.querySelector('.player-1-panel').classList.add('active');
+		
+		//Remove dice in between switching active players
+		document.querySelector('.dice').style.display = 'none';
 	}
 });
