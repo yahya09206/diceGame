@@ -11,10 +11,6 @@ GAME RULES:
 //Variable declarations for game
 var scores, roundScore, activePlayer;
 
-scores = [0,0];
-roundScore = 0;
-activePlayer = 0;
-
 //Hide dice at begining of game
 document.querySelector('.dice').style.display = 'none';
 
@@ -82,3 +78,12 @@ function nextPlayer(){
 };
 
 //New game initialization
+document.querySelector('.btn-new').addEventListener('click', function(){
+
+});
+
+function init(){
+	scores = [0,0];
+	roundScore = 0;
+	activePlayer = 0;
+}
