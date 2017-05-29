@@ -59,5 +59,9 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
 //Hold score function
 document.querySelector('.btn-hold').addEventListener('click', function(){
+	//Add current score to players global score
+	scores[activePlayer] += roundScore;
+	//Update the ui
 
+	//Check if player won the game
 });
