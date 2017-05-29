@@ -40,7 +40,25 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		//show current user inside of interface
 		document.querySelector('#current-' + activePlayer).textContent = roundScore;
 	}else {
-		//Switch to Next Player using ternary operator
+		//next player
+		nextPlayer();
+	}
+});
+
+//Hold score function
+document.querySelector('.btn-hold').addEventListener('click', function(){
+	//Add current score to players global score
+	scores[activePlayer] += roundScore;
+	//Update the ui
+	document.querySelector('#score' + activePlayer).textContent = scores[activePlayer];
+	//next player
+	nextPlayer();
+	//Check if player won the game
+});
+
+//Next player function
+function nextPlayer(){
+	//Switch to Next Player using ternary operator
 		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 		//Set round score back to 0
 		roundScore = 0;
@@ -54,17 +72,4 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		
 		//Remove dice in between switching active players
 		document.querySelector('.dice').style.display = 'none';
-	}
-});
-
-//Hold score function
-document.querySelector('.btn-hold').addEventListener('click', function(){
-	//Add current score to players global score
-	scores[activePlayer] += roundScore;
-	//Update the ui
-	document.querySelector('#score' + activePlayer).textContent = scores[activePlayer];
-
-	//Check if player won the game
-});
-
-//Next player function
+	};
